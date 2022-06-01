@@ -21,8 +21,6 @@ class Yosys(MakefilePackage):
     depends_on('bison')
 
     def edit(self, spec, prefix):
-        env['CONFIG'] = 'gcc'
-        # FIXME: Edit the Makefile if necessary
-        # FIXME: If not needed delete this function
-        # makefile = FileFilter('Makefile')
-        # makefile.filter('CC = .*', 'CC = cc')
+        env['PREFIX'] = prefix
+        makefile = FileFilter('Makefile')
+        makefile.filter('CONFIG := .*', 'CONFIG := gcc')
