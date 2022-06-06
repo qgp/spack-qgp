@@ -11,10 +11,12 @@ class Nextpnr(CMakePackage):
 
     homepage = "https://https://github.com/YosysHQ/nextpnr"
     url      = "https://github.com/YosysHQ/nextpnr/archive/refs/tags/nextpnr-0.3.tar.gz"
+    git      = "https://github.com/YosysHQ/nextpnr"
 
     maintainers = ['qgp']
 
     version('0.3', sha256='6dda678d369a73ca262896b672958eebeb2e6817f60afb411db31abeff191c4a')
+    version('git', branch='master')
 
     depends_on('icestorm')
 
