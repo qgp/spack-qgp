@@ -33,7 +33,8 @@ class Icestorm(MakefilePackage):
 
     maintainers = ['qgp']
 
-    # depends_on('libftdi')
+    depends_on('libftdi1')
+    depends_on('pkgconfig', type='build')
 
     def edit(self, spec, prefix):
         env['PREFIX'] = prefix

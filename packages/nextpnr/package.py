@@ -15,8 +15,8 @@ class Nextpnr(CMakePackage):
 
     maintainers = ['qgp']
 
+    version('master', branch='master')
     version('0.3', sha256='6dda678d369a73ca262896b672958eebeb2e6817f60afb411db31abeff191c4a')
-    version('git', branch='master')
 
     depends_on('icestorm')
 

@@ -19,6 +19,8 @@ class Yosys(MakefilePackage):
 
     depends_on('flex')
     depends_on('bison')
+    depends_on('libffi')
+    depends_on('pkgconfig', type='build')
 
     def edit(self, spec, prefix):
         env['PREFIX'] = prefix
