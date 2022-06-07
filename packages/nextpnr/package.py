@@ -19,6 +19,9 @@ class Nextpnr(CMakePackage):
     version('0.3', sha256='6dda678d369a73ca262896b672958eebeb2e6817f60afb411db31abeff191c4a')
 
     depends_on('icestorm')
+    depends_on('eigen')
+    depends_on('python')
+    depends_on('pkgconfig', type='build')
 
     def cmake_args(self):
         args = ['-DARCH=ice40', f'-DICESTORM_INSTALL_PREFIX={self.spec["icestorm"].prefix}']
