@@ -26,6 +26,7 @@ class Yosys(MakefilePackage):
     depends_on('bison')
     depends_on('libffi')
     depends_on('pkgconfig', type='build')
+    depends_on('tcl')
 
     def edit(self, spec, prefix):
         env['PREFIX'] = prefix
