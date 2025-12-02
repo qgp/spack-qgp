@@ -15,6 +15,9 @@ class Nextpnr(CMakePackage):
     maintainers = ['qgp']
 
     version('master', branch='master')
+    version("0.9", sha256="8cebc65049ff91c411d963ea2304b1a3dd42036f79de2eb3e9834c842f934495")
+    version("0.8", sha256="968ce3f39973e1d855c6bf1606a334d9f9650cff978554b822de0a6c088947bd")
+    version("0.7", sha256="bd173cb218c97f66e4afdf7b886d70c8c0893f544a1cf20b50c0182a1d9f2f45")
     version("0.6", sha256="76fa4bca48cc8462a8a3c28f89673439e7632a9baabc7bb121c58b75936d2d0b")
     version("0.5", sha256="2e3485753123f1505351a37adec37ce47a3a96d3f67bbcaf59ec390c8ffc1cdd")
     version("0.4", sha256="ae8e01496c3bb6607cef0e2501b8cf00aba564e9b116dd323887575ab82757c0")
