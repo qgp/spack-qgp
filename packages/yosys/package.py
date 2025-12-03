@@ -35,7 +35,7 @@ class Yosys(MakefilePackage):
     version('0.16', sha256='c7a161e5f567b853a18be8417b60d31ce77804994dafc93306b897ddc335aa3c')
     version('0.15', sha256='a40fcc487d2a31c2abc6f61d39a84e262f2650e40de479542bbde317308c4612')
 
-    depends_on('abc')
+    # depends_on('abc')
     depends_on('cxxopts')
     depends_on('flex')
     depends_on('bison')
@@ -43,9 +43,9 @@ class Yosys(MakefilePackage):
     depends_on('pkgconfig', type='build')
     depends_on('tcl')
 
-    @property
-    def build_targets(self):
-        return [f"ABCEXTERNAL={self.spec["abc"].prefix.lib}"]
+    # @property
+    # def build_targets(self):
+    #     return [f"ABCEXTERNAL={self.spec["abc"].prefix.lib}"]
 
     def edit(self, spec, prefix):
         env['PREFIX'] = prefix
